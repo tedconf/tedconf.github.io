@@ -1,53 +1,22 @@
-# Tedconf
+# TED Open Source
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is the source code for tedconf.github.io, an index of TED's open source projects.
 
-## Prerequisites
+This is an Ember app, and the build is hosted on GitHub Pages. The source is on the `source` branch, and `master` holds the static distrubtion. This is how GitHub Pages is set up to host organization pages.
 
-You will need the following things properly installed on your computer.
+**Developing**
 
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://www.ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+Checkout `source`, then run `ember s` to serve and develop locally.
 
-## Installation
+**Deploying**
 
-* `git clone <repository-url>` this repository
-* change into the new directory
-* `npm install`
-* `bower install`
+When you're ready to deploy your changes, make sure you're on the `source` branch, then run
 
-## Running / Development
+```sh
+$ ember github-pages:commit --branch master --message 'Deploying to master'
+# The ember app will build, then you'll see this message:
+Done. All that's left is to git push the master branch.
+$ git push origin master
+```
 
-* `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://www.ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+and in not too long, http://tedconf.github.io/ should be updated with your changes!
