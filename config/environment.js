@@ -3,8 +3,9 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'tedconf',
+    podModulePrefix: 'tedconf/pods',
     environment: environment,
-    baseURL: '/tedconf',
+    baseURL: '/',
     locationType: 'hash',
     EmberENV: {
       FEATURES: {

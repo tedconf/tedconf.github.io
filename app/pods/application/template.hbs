@@ -1,0 +1,20 @@
+<header class='Header'>
+  <img class='Header__logo-main' src='assets/images/ted_logo.png' alt='TED'>
+  <img class='Header__logo-sub' src='assets/images/open_source_logo.png' alt='Open Source'>
+
+  <p class='Byline'>
+    We use and love open-source software. Check out some of our libraries below.
+  </p>
+</header>
+
+<div class="u-container">
+  {{#each groups as |group|}}
+    <div class="Project-group">
+      <h2 class="Project-group__name">{{group.name}}</h2>
+
+      {{#each group.projects as |project|}}
+        {{project-card project=project}}
+      {{/each}}
+    </div>
+  {{/each}}
+</div>

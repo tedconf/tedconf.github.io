@@ -1,0 +1,103 @@
+/*
+  Base
+*/
+@font-face {
+  font-family: 'TED';
+  src: url('fonts/hn-085-n.eot?') format('eot'), url('fonts/hn-085-n.woff') format('woff'), url('fonts/hn-085-n.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  background-color: rgb(245,245,245);
+  color: #555;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*
+  Utilities
+*/
+.u-ted-font {
+  font-family: 'TED';
+}
+.u-container {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+/*
+  Components
+*/
+.Header {
+  background-color: white;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 4em;
+  padding-bottom: 4em;
+  text-align: center;
+
+  &__logo-main {
+    height: 45px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__logo-sub {
+    margin-top: 0.8em;
+    opacity: 0.7;
+    width: 210px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.Byline {
+  margin-top: 2em;
+}
+
+.Project-group {
+  margin-bottom: 50px;
+
+  &__name {
+    font-weight: 200;
+    font-size: 17px;
+    color: #999;
+  }
+}
+
+.Project-card {
+  display: block;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  padding: 25px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  text-decoration: none !important;
+  color: inherit;
+  margin-bottom: 15px;
+
+  &__title {
+    font-size: 20px;
+    margin: 0;
+  }
+  &__description {
+    font-size: 94%;
+    color: #999;
+  }
+  &__link {
+    text-align: right;
+    margin-top: 20px;
+    margin-bottom: 0;
+    color: #999;
+  }
+  &__link-text {
+    font-size: 80%;
+    // border-bottom: 1px solid #999;
+  }
+}
