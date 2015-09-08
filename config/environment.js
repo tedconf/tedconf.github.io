@@ -4,8 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'tedconf',
     environment: environment,
-    baseURL: '/',
-    locationType: 'auto',
+    baseURL: '/tedconf',
+    locationType: 'hash',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
