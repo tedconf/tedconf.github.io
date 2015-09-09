@@ -1,3 +1,15 @@
+@import 'flexbox';
+
+/*
+  Variables
+*/
+$blue: #00b7ea;
+$red: #E62B1E;
+$purple: #441678;
+$altPurple: #643D68;
+
+$desktop: 900px;
+
 /*
   Base
 */
@@ -20,14 +32,48 @@ img {
 }
 
 /*
+  Mixins
+*/
+@mixin below($point) {
+  @media only screen and (max-width: $point - 1) { @content; }
+}
+@mixin above($point) {
+  @media only screen and (min-width: $point) { @content; }
+}
+@mixin double-gradient($from, $to) {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#00b7ea+0,f9332d+100 */
+  background: $from; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  $from 10%, $to 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(10%,$from), color-stop(100%,$to)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg,  $from 10%,$to 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg,  $from 10%,$to 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg,  $from 10%,$to 100%); /* IE10+ */
+  background: linear-gradient(135deg,  $from 10%,$to 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+@mixin triple-gradient($one, $two, $three) {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ebf1f6+0,abd3ee+50,d5ebfb+100 */
+  background: #ebf1f6; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  $one 10%, $two 50%, $three 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(10%,$one), color-stop(50%,$two), color-stop(100%,$three)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg,  $one 10%,$two 50%,$three 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg,  $one 10%,$two 50%,$three 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg,  $one 10%,$two 50%,$three 100%); /* IE10+ */
+  background: linear-gradient(135deg,  $one 10%,$two 50%,$three 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$one', endColorstr='$three',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+@mixin transition($transition...) {
+  -moz-transition:    $transition;
+  -o-transition:      $transition;
+  -webkit-transition: $transition;
+  transition:         $transition;
+}
+
+/*
   Utilities
 */
 .u-ted-font {
   font-family: 'TED';
-}
-.u-container {
-  padding-left: 5%;
-  padding-right: 5%;
 }
 
 /*
@@ -35,60 +81,135 @@ img {
 */
 .Header {
   background-color: white;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-top: 4em;
-  padding-bottom: 4em;
+  padding: 5em 5%;
   text-align: center;
+  position: relative;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.56), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+
+  @include above($desktop) {
+    padding-top: 8em;
+    padding-bottom: 8em;
+  }
 
   &__logo-main {
-    height: 45px;
+    height: 35px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+
+    @include above($desktop) {
+      height: auto;
+    }
   }
   &__logo-sub {
-    margin-top: 0.8em;
-    opacity: 0.7;
-    width: 210px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    font-weight: 100;
+    font-size: 30px;
+    margin-top: 8px;
+
+    @include above($desktop) {
+      font-size: 40px;
+    }
+  }
+  // &__logo-sub {
+  //   opacity: 0.7;
+  //   width: 240px;
+  //   display: block;
+  //   margin: 0.8em auto 3em;
+
+  //   @include above($desktop) {
+  //     width: 350px;
+  //   }
+  // }
+  &__byline-wrapper {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  &__byline {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @include below(420px) {
+      display: inline;
+    }
+    @include above($desktop) {
+      font-size: 18px;
+    }
   }
 }
 
-.Byline {
-  margin-top: 2em;
+.Project-groups-wrapper {
+  @include double-gradient($purple, $red); // favorite
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.Project-groups {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px 7%;
+  max-width: 300px;
+
+  @include above(700px) {
+    max-width: none;
+    width: 600px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include above(1000px) {
+    max-width: none;
+    width: 900px;
+  }
 }
 
 .Project-group {
   margin-bottom: 50px;
 
+  @include above($desktop) {
+    margin-bottom: 15px;
+  }
+
   &__name {
-    font-weight: 200;
-    font-size: 17px;
-    color: #999;
+    font-weight: normal;
+    font-size: 15px;
+    color: white;
   }
 }
 
+.Project-cards {
+  @include flexbox;
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
+}
+
 .Project-card {
+  padding: 25px;
+  margin-bottom: 15px;
   display: block;
   background-color: white;
   border: 1px solid #ddd;
   border-radius: 2px;
-  padding: 25px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   text-decoration: none !important;
   color: inherit;
-  margin-bottom: 15px;
+  max-width: 240px;
+  @include transition(all, .15s);
+  @include flex(0, 1, 100%);
+
+  &:hover {
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.3), 0 4px 15px 0 rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    // box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  }
 
   &__title {
-    font-size: 20px;
+    font-size: 19px;
     margin: 0;
   }
   &__description {
     font-size: 94%;
     color: #999;
+    margin-top: 7px;
   }
   &__link {
     text-align: right;
@@ -99,5 +220,46 @@ img {
   &__link-text {
     font-size: 80%;
     // border-bottom: 1px solid #999;
+  }
+}
+
+.Footer {
+  font-size: 0.8em;
+  background-color: #242424;
+  color: #999;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 5%;
+  padding-right: 5%;
+
+  @include above($desktop) {
+    font-size: 0.9em;
+  }
+
+  &__inner {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  a {
+    color: #999;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  &__nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+  }
+  &__nav-item {
+    float: left;
+    padding-left: 15px;
   }
 }

@@ -23,26 +23,16 @@ export default Ember.Controller.extend({
       ]
     },
     {
-      name: 'Node',
-      projects: [
-        {
-          title: 'node-m3u8',
-          description: 'Streaming parser for m3u8 files',
-          url: 'https://github.com/tedconf/node-m3u8',
-        }
-      ]
-    },
-    {
       name: 'Ruby',
       projects: [
         {
           title: 'Front End Builds',
-          description: 'A Rails engine to deploy and serve JavaScript applications',
+          description: 'A Rails engine for deploying and serving JavaScript applications',
           url: 'https://github.com/tedconf/front_end_builds',
         },
         {
           title: 'Serialism',
-          description: 'General-purpose serialization library inspired',
+          description: 'General-purpose serialization library',
           url: 'https://github.com/tedconf/serialism',
         },
         {
@@ -54,6 +44,16 @@ export default Ember.Controller.extend({
           title: 'Time chunk',
           description: 'Iterate over time ranges in discrete chunks',
           url: 'https://github.com/tedconf/time_chunk',
+        }
+      ]
+    },
+    {
+      name: 'Node',
+      projects: [
+        {
+          title: 'node-m3u8',
+          description: 'Streaming parser for m3u8 files',
+          url: 'https://github.com/tedconf/node-m3u8',
         }
       ]
     },
