@@ -8,6 +8,10 @@ This is an Ember app, and the build is hosted on GitHub Pages. The source is on 
 
 Checkout `source`, then run `ember s` to serve and develop locally.
 
+**Adding your project**
+
+Add your project + details to the `groups` property [here](https://github.com/tedconf/tedconf.github.io/blob/source/app/pods/application/controller.js).
+
 **Deploying**
 
 When you're ready to deploy your changes, make sure you're on the `source` branch, then run
