@@ -10,7 +10,7 @@ Checkout `source`, then run `ember s` to serve and develop locally.
 
 **Adding your project**
 
-Add your project + details to the `groups` property to [the application controller](https://github.com/tedconf/tedconf.github.io/blob/source/app/pods/application/controller.js).
+Add your project + details to the `groups` property of [the application controller](https://github.com/tedconf/tedconf.github.io/blob/source/app/pods/application/controller.js).
 
 **Deploying**
 
