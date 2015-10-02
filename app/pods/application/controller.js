@@ -11,6 +11,11 @@ export default Ember.Controller.extend({
           url: 'https://tedconf.github.io/ember-collapsible-panel',
         },
         {
+          title: 'Ember TED Gear',
+          description: 'A TED gear component',
+          url: 'https://github.com/tedconf/ember-ted-gear',
+        },
+        {
           title: 'Ember CLI Front End Builds',
           description: 'Deploy your Ember app to a Front End Builds-enabled Rails server',
           url: 'https://github.com/tedconf/ember-cli-front-end-builds',
