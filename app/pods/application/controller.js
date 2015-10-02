@@ -13,7 +13,7 @@ export default Ember.Controller.extend({
         {
           title: 'Ember TED Gear',
           description: 'A TED gear component',
-          url: 'https://github.com/tedconf/ember-ted-gear',
+          url: 'http://tedconf.github.io/ember-ted-gear/',
         },
         {
           title: 'Ember CLI Front End Builds',
