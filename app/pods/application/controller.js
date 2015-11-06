@@ -16,6 +16,11 @@ export default Ember.Controller.extend({
           url: 'http://tedconf.github.io/ember-ted-gear/',
         },
         {
+          title: 'Ember Searchable Select',
+          description: 'Data-down, actions up select-like menu with searching and filtering capabilities',
+          url: 'http://tedconf.github.io/ember-searchable-select/',
+        },
+        {
           title: 'Ember CLI Front End Builds',
           description: 'Deploy your Ember app to a Front End Builds-enabled Rails server',
           url: 'https://github.com/tedconf/ember-cli-front-end-builds',

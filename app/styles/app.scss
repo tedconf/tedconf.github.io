@@ -179,20 +179,21 @@ img {
 .Project-cards {
   @include flexbox;
   @include flex-wrap(wrap);
-  @include justify-content(space-between);
+  // @include justify-content(space-between);
 }
 
 .Project-card {
+  display: block;
+  max-width: 230px;
   padding: 25px;
   margin-bottom: 15px;
-  display: block;
+  margin-right: 15px;
   background-color: white;
   border: 1px solid #ddd;
   border-radius: 2px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   text-decoration: none !important;
   color: inherit;
-  max-width: 240px;
   @include transition(all, .15s);
   @include flex(0, 1, 100%);
 
