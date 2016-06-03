@@ -74,6 +74,11 @@ export default Ember.Controller.extend({
           title: 'Styleguide',
           description: 'Ruby, CSS, Ember and rspec code style guides',
           url: 'https://github.com/tedconf/code-style-guides',
+        },
+        {
+          title: 'shed.css',
+          description: 'The Beginning of the End of CSS: A functional/atomic css library',
+          url: 'https://github.com/tedconf/shed-css',
         }
       ]
     },
