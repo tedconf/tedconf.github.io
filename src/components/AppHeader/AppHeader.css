@@ -1,0 +1,53 @@
+.Header {
+	background-color: #fff;
+	padding: 5em 5%;
+	text-align: center;
+	position: relative;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .56), 0 2px 10px 0 rgba(0, 0, 0, .12);
+	box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+}
+@media only screen and (min-width: 900px) {
+	.Header {
+		padding-top: 8em;
+		padding-bottom: 8em;
+	}
+}
+.HeaderLogo-Main {
+	height: 35px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+@media only screen and (min-width: 900px) {
+	.HeaderLogo-Main {
+		height: auto;
+	}
+}
+.HeaderLogo-Sub {
+	font-weight: 100;
+	font-size: 30px;
+	margin-top: 8px;
+}
+@media only screen and (min-width: 900px) {
+	.HeaderLogo-Sub {
+		font-size: 40px;
+	}
+}
+.Header-BylineWrapper {
+	padding-left: 5%;
+	padding-right: 5%;
+}
+.Header-Byline {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+@media only screen and (max-width: 419px) {
+	.Header-Byline {
+		display: inline;
+	}
+}
+@media only screen and (min-width: 900px) {
+	.Header-Byline {
+		font-size: 18px;
+	}
+}
