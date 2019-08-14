@@ -1,10 +1,41 @@
+# TED Open Source homepage
+
+This is the source code for tedconf.github.io, an index of TED's open source projects.
+
+**NOTE: Development is on the `source` branch, deployed build is on the `master` branch.**
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## To Add/Update a Project
+
+Add the project and details as a JSON object in the appropriate project group's `"projects"` array in `src/data/projects.json`.
+
+Then `yarn build` and deploy to `master` branch.
+
+**TODO: Deploy docs? The Ember-based deploy stuff seemed extra complicated, but nothing has been done to script the delivery of the build output to the `master` branch root.**
+
+## Project Component Structure
+
+The rendering tree looks something like this. A few notes on notation:
+
+* Data imports are shown in parens next to the component that imports the data file.
+* A `+` next to the component means many of those are potentially rendered depending on `props`.
+
+```{text}
+index.js
+'- src/components/App (<- src/data/projects.json)
+    |- src/components/AppHeader
+    |- src/components/ProjectGroups
+    |   '- src/components/ProjectGroup +
+    |       '- src/components/ProjectCard +
+    '- src/components/Footer (<- src/data/footer-links.json)
+```
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm start` or `yarn start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -12,12 +43,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-### `npm test`
+### `npm test` or `yarn test`
 
 Launches the test runner in the interactive watch mode.<br>
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### `npm run build` or `yarn build`
 
 Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -26,6 +57,14 @@ The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run deploy` or `yarn run deploy`
+
+**Note: this has not been tested yet!**
+
+Based on this: https://facebook.github.io/create-react-app/docs/deployment#github-pages-https-pagesgithubcom
+
+This uses the `gh-pages` package to build the app and push the built code to `master` branch.
 
 ### `npm run eject`
 
