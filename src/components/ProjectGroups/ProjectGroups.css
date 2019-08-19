@@ -1,0 +1,31 @@
+.ProjectGroupsWrapper {
+	background: no-repeat fixed #441678;
+	background: -moz-linear-gradient(-45deg, #441678 10%, #e62b1e 100%) no-repeat fixed;
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(10%, #441678), color-stop(100%, #e62b1e))
+		no-repeat fixed;
+	background: -webkit-linear-gradient(-45deg, #441678 10%, #e62b1e 100%) no-repeat fixed;
+	background: -o-linear-gradient(-45deg, #441678 10%, #e62b1e 100%) no-repeat fixed;
+	background: -ms-linear-gradient(-45deg, #441678 10%, #e62b1e 100%) no-repeat fixed;
+	background: linear-gradient(135deg, #441678 10%, #e62b1e 100%) no-repeat fixed;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$from', endColorstr='$to', GradientType=1);
+}
+.ProjectGroups {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 40px 7%;
+	max-width: 300px;
+}
+@media only screen and (min-width: 700px) {
+	.ProjectGroups {
+		max-width: none;
+		width: 600px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+@media only screen and (min-width: 1000px) {
+	.ProjectGroups {
+		max-width: none;
+		width: 900px;
+	}
+}

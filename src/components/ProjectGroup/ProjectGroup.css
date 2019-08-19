@@ -1,0 +1,28 @@
+.ProjectGroup {
+	margin-bottom: 50px;
+}
+@media only screen and (min-width: 900px) {
+	.ProjectGroup {
+		margin-bottom: 15px;
+	}
+}
+.ProjectGroup-Name {
+	font-weight: 400;
+	font-size: 15px;
+	color: #fff;
+}
+.ProjectCards {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	list-style-type: none;
+	padding-left: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+}
