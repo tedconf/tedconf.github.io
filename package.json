@@ -13,6 +13,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "ci-test": "CI=test react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "yarn build",
     "deploy": "gh-pages -b master -d build"
