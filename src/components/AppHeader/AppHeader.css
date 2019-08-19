@@ -6,6 +6,10 @@
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .56), 0 2px 10px 0 rgba(0, 0, 0, .12);
 	box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
 }
+.HeaderWrapper {
+	margin-top: 0;
+	margin-bottom: 0;
+}
 @media only screen and (min-width: 900px) {
 	.Header {
 		padding-top: 8em;
@@ -36,6 +40,8 @@
 .Header-BylineWrapper {
 	padding-left: 5%;
 	padding-right: 5%;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 .Header-Byline {
 	margin-top: 0;
