@@ -2,7 +2,7 @@ import React from 'react';
 import ted_logo from './ted_logo.png';
 import './AppHeader.css';
 
-function AppHeader() {
+const AppHeader = () => {
   return (
     <header className="Header">
       <img src={ted_logo} className="HeaderLogo-Main" alt="logo" />

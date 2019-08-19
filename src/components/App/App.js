@@ -5,7 +5,7 @@ import Footer from '../Footer/Footer';
 import projectData from '../../data/projects.json';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <AppHeader />

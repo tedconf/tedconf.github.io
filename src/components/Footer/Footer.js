@@ -2,12 +2,12 @@ import React from 'react';
 import './Footer.css';
 import footerLinks from '../../data/footer-links.json';
 
-function Footer() {
+const Footer = () => {
   return (
     <footer className="Footer">
       <div className="Footer-Inner">
         <ul className="Footer-Nav">
-          {footerLinks.map((item, idx) => <li className="Footer-NavItem" key={idx}>
+          {footerLinks.map((item) => <li className="Footer-NavItem" key={item.title}>
             <a href={item.url}>{item.title}</a>
           </li>)}
         </ul>
