@@ -7,7 +7,7 @@ const ProjectGroup = ({name, projects}) => {
     <div className="ProjectGroup">
       <h2 className="ProjectGroup-Name">{name}</h2>
       <ul className="ProjectCards">
-        {projects ? projects.map((project) => <ProjectCard key={project.title} title={project.title} desc={project.description} url={project.url} />) : ''}
+        {projects ? projects.map((project) => <ProjectCard key={project.title} {...project} />) : ''}
       </ul>
     </div>
   );
