@@ -1,6 +1,11 @@
-version: 1.0
-vertical: Web
+version: 1.3
+squad: Web
 production:
   endpoint_url: https://tedconf.github.io
 staging:
   endpoint_url:
+primary_languages:
+  - javascript
+wiki_categories:
+  - open-source
+support_level: Minimal
